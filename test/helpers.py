@@ -1,8 +1,6 @@
 # flake8: noqa
 import time
 
-import pytest
-
 import fix_path
 from pycallgraph import *
 from pycallgraph.tracer import *

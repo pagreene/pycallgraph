@@ -1,3 +1,6 @@
+from __future__ import division, absolute_import, print_function, unicode_literals
+from builtins import dict, str
+
 import argparse
 import sys
 
@@ -38,7 +41,7 @@ class Config(object):
         self.did_init = True
 
         # Update the defaults with anything from kwargs
-        [setattr(self, k, v) for k, v in kwargs.iteritems()]
+        [setattr(self, k, v) for k, v in kwargs.items()]
 
         self.create_parser()
 

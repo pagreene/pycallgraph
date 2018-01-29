@@ -1,3 +1,6 @@
+from __future__ import division, absolute_import, print_function, unicode_literals
+from builtins import dict, str
+
 import re
 import os
 from distutils.spawn import find_executable
@@ -16,14 +19,14 @@ class Output(object):
         self.edge_label_func = self.edge_label
 
         # Update the defaults with anything from kwargs
-        [setattr(self, k, v) for k, v in kwargs.iteritems()]
+        [setattr(self, k, v) for k, v in kwargs.items()]
 
     def set_config(self, config):
         '''
         This is a quick hack to move the config variables set in Config into
         the output module config variables.
         '''
-        for k, v in config.__dict__.iteritems():
+        for k, v in config.__dict__.items():
             if hasattr(self, k) and \
                     callable(getattr(self, k)):
                 continue
